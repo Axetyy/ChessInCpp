@@ -1,0 +1,3 @@
+﻿  King.cpp
+C:\Users\Iulian\source\repos\HandmadeChess\King.cpp(21,39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  HandmadeChess.vcxproj -> C:\Users\Iulian\source\repos\HandmadeChess\x64\Debug\HandmadeChess.exe

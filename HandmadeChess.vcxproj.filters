@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Images">
+      <UniqueIdentifier>{f42302f6-5685-4b56-a9d6-9690514d9a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Images\BlackPieces">
+      <UniqueIdentifier>{5f6026d1-3347-4a27-9ab6-46eaacd40287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ArrowManager">
+      <UniqueIdentifier>{b400de97-e253-4302-9899-a72e8c6916b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Images\WhitePieces">
+      <UniqueIdentifier>{2d5e3caa-b79f-4bae-acce-f28e8ed69bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pieces">
+      <UniqueIdentifier>{5b87f47b-f1ae-4b5f-acef-0865c7b8cb45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pieces\Pawn">
+      <UniqueIdentifier>{4edbd8b5-aefa-4845-b702-47bcf7909af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Board">
+      <UniqueIdentifier>{784663d5-9aff-44b8-8598-6450bafbdb5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pieces\Knight">
+      <UniqueIdentifier>{e307716c-bfe2-4027-9659-f8c6dbc14d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pieces\Bishop">
+      <UniqueIdentifier>{2a2c3c6d-3d17-4a6c-b062-61261f9d70cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pieces\Rook">
+      <UniqueIdentifier>{0c074860-0185-4a9d-b486-c3dda2becc87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pieces\King">
+      <UniqueIdentifier>{dc00b786-9d4b-44da-b6d8-b230913ea80d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pieces\Queen">
+      <UniqueIdentifier>{33607048-80e7-4d4f-b4d4-f54ab561ab98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HandmadeChess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow.h">
+      <Filter>Source Files\ArrowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrowManager.h">
+      <Filter>Source Files\ArrowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Pieces.h">
+      <Filter>Source Files\Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="IArrowManager.h">
+      <Filter>Source Files\ArrowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Source Files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Pawn.h">
+      <Filter>Source Files\Pieces\Pawn</Filter>
+    </ClInclude>
+    <ClInclude Include="Knight.h">
+      <Filter>Source Files\Pieces\Knight</Filter>
+    </ClInclude>
+    <ClInclude Include="Bishop.h">
+      <Filter>Source Files\Pieces\Bishop</Filter>
+    </ClInclude>
+    <ClInclude Include="Rook.h">
+      <Filter>Source Files\Pieces\Rook</Filter>
+    </ClInclude>
+    <ClInclude Include="Queen.h">
+      <Filter>Source Files\Pieces\Queen</Filter>
+    </ClInclude>
+    <ClInclude Include="King.h">
+      <Filter>Source Files\Pieces\King</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HandmadeChess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrowManager.cpp">
+      <Filter>Source Files\ArrowManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Pieces.cpp">
+      <Filter>Source Files\Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="IPiece.h">
+      <Filter>Source Files\Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Pawn.cpp">
+      <Filter>Source Files\Pieces\Pawn</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="Knight.cpp">
+      <Filter>Source Files\Pieces\Knight</Filter>
+    </ClCompile>
+    <ClCompile Include="Bishop.cpp">
+      <Filter>Source Files\Pieces\Bishop</Filter>
+    </ClCompile>
+    <ClCompile Include="Rook.cpp">
+      <Filter>Source Files\Pieces\Rook</Filter>
+    </ClCompile>
+    <ClCompile Include="Queen.cpp">
+      <Filter>Source Files\Pieces\Queen</Filter>
+    </ClCompile>
+    <ClCompile Include="King.cpp">
+      <Filter>Source Files\Pieces\King</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HandmadeChess.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HandmadeChess.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
