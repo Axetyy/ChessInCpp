@@ -6,6 +6,8 @@
 #include <ctime>
 #include "GameLogic.h"
 #include <string>
+#include "Rook.h"
+#include "King.h"
 
 #define ID_PLAY_BUTTON  1
 #define ID_EXIT_BUTTON  2
@@ -262,24 +264,69 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			int y = GET_Y_LPARAM(lParam);
 			int gridMouseX = globalBoard->pixelToGridX(x);
 			int gridMouseY = globalBoard->pixelToGridY(y);
-			
+
+
+			globalBoard->updateAttackedSquares(gameInstance.getPieces());
+			gameInstance.addCheckingPieces();
+			int state = gameInstance.checkLoss();
+			if (state != -1)
+			{
+				switch (state)
+				{
+				case 0:
+					MessageBox(NULL, _T("Checkmate"), _T(" Black lost!"), MB_OK);
+					PostQuitMessage(0);
+					break;
+				case 1:
+					MessageBox(NULL, _T("Checkmate"), _T(" White lost!"), MB_OK);
+					PostQuitMessage(0);
+					break;
+				case 2:
+					MessageBox(NULL, _T("Stalemate"), _T(" Draw!"), MB_OK);
+					PostQuitMessage(0);
+				}
+			}
 			if (gSelectedPiece) {
 				bool validMove = false;
 				int lastX = gSelectedPiece->gridX;
 				int lastY = gSelectedPiece->gridY;
-				gSelectedPiece->move(x, y, gSelectedPiece->gridX, gSelectedPiece->gridY, gridMouseX, gridMouseY, validMove);
+
+				gSelectedPiece->move(x, y, gSelectedPiece->gridX, gSelectedPiece->gridY,
+					gridMouseX, gridMouseY, validMove);
+
 				if (validMove) {
-					if (globalBoard->firstPieceMove == false) globalBoard->firstPieceMove = true;
+					globalBoard->updateAttackedSquares(gameInstance.getPieces());
+					gSelectedPiece->isFirstMove = false;
+
+
+					gameInstance.globalAvailableMoves.clear();
+
+					for (auto piece : gameInstance.getPieces()->getAllPieces())
+					{
+						piece->updateAvailableMoves(globalBoard->isWhite,false);
+					}
+
+					
+					
+					
+
+
 					gameInstance.toggleTurn();
+
+					if (!globalBoard->firstPieceMove)
+						globalBoard->firstPieceMove = true;
+
 					globalBoard->updateLastMoved(gridMouseX, gridMouseY, lastX, lastY);
 				}
 				gSelectedPiece = nullptr;
 			}
 			else {
-				IPiece* clickedPiece = gameInstance.getPieces()->getPieceAt(x, y, globalBoard->boardOrgX, globalBoard->boardOrgY, globalBoard->cellSize);
+				IPiece* clickedPiece = gameInstance.getPieces()->getPieceAt(x, y,
+					globalBoard->boardOrgX, globalBoard->boardOrgY, globalBoard->cellSize);
 				if (clickedPiece != nullptr && clickedPiece->faction == gameInstance.currentTurn) {
 					gSelectedPiece = clickedPiece;
-					gSelectedPiece->updateAvailableMoves(globalBoard->isWhite);
+					gSelectedPiece->updateAvailableMoves(globalBoard->isWhite, false);
+					globalBoard->updateAttackedSquares(gameInstance.getPieces());
 				}
 				globalBoard->clearRed();
 				globalBoard->getArrowManager()->clear();
@@ -289,12 +336,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		break;
 	}
 
+
 	case WM_LBUTTONUP:
 	{
 		break;
 	}
 	case WM_MOUSEMOVE:
 	{
+		
 		if ((wParam & MK_RBUTTON) && globalBoard->visible)
 		{
 			int x = GET_X_LPARAM(lParam);
@@ -302,6 +351,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			int gridX = globalBoard->pixelToGridX(x);
 			int gridY = globalBoard->pixelToGridY(y);
 			globalBoard->getArrowManager()->updateDrag(gridX, gridY);
+
 			InvalidateRect(hwnd, NULL, FALSE);
 		}
 		break;
@@ -345,6 +395,5 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	default:
 		return DefWindowProc(hwnd, uMsg, wParam, lParam);
 	}
-
 	return 0;
 }

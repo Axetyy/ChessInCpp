@@ -8,6 +8,13 @@
 #include <iostream>
 #include <tchar.h>
 #include <string>
+#include "Pieces.h"
+#include "Knight.h"
+#include "Pawn.h"
+#include "Queen.h"
+#include "Bishop.h"
+#include "Rook.h"
+#include "King.h"
 
 bool inside(int x, int y,int n)
 {
@@ -116,4 +123,65 @@ void Board::updateLastMoved(int currX, int currY, int prevX, int prevY)
 	this->lastPMprevY = prevY;
 
 }
+void Board::updateAttackedSquares(Pieces* pieces) {
+	memset(attackedByWhite, 0, sizeof(attackedByWhite));
+	memset(attackedByBlack, 0, sizeof(attackedByBlack));
 
+	auto getMatrix = [this](bool isWhite) -> int (*)[9] {
+		return isWhite ? attackedByWhite : attackedByBlack;
+	};
+	for (IPiece* piece : pieces->getAllPieces()) {
+		int x = piece->gridX;
+		int y = piece->gridY;
+		bool isWhite = (piece->faction == 1);
+		int (*attackedMatrix)[9] = getMatrix(isWhite);
+		if (typeid(*piece) == typeid(Pawn)) {
+			int direction = isWhite ? -1 : 1;
+			if (x > 0 && y + direction >= 0 && y + direction < 8)
+				attackedMatrix[x - 1][y + direction] = 1;
+			if (x < 7 && y + direction >= 0 && y + direction < 8)
+				attackedMatrix[x + 1][y + direction] = 1;
+		}
+		else if (typeid(*piece) == typeid(Knight)) {
+			const int moves[8][2] = { {2,1}, {1,2}, {-1,2}, {-2,1}, {-2,-1}, {-1,-2}, {1,-2}, {2,-1} };
+			for (const auto& move : moves) {
+				int nx = x + move[0], ny = y + move[1];
+				if (nx >= 0 && nx < 8 && ny >= 0 && ny < 8)
+					attackedMatrix[nx][ny] = 1;
+			}
+		}
+		if (typeid(*piece) == typeid(Bishop) || typeid(*piece) == typeid(Queen)) {
+			const int diagDirs[4][2] = { {1,1}, {1,-1}, {-1,1}, {-1,-1} };
+			for (const auto& dir : diagDirs) {
+				for (int step = 1;; step++) {
+					int nx = x + dir[0] * step, ny = y + dir[1] * step;
+					if (nx < 0 || nx >= 8 || ny < 0 || ny >= 8) break;
+					attackedMatrix[nx][ny] = 1;
+					if (pieces->getPieceAtGrid(nx, ny)) break;
+				}
+			}
+		}
+		if (typeid(*piece) == typeid(Rook) || typeid(*piece) == typeid(Queen)) {
+			const int straightDirs[4][2] = { {1,0}, {0,1}, {-1,0}, {0,-1} };
+			for (const auto& dir : straightDirs) {
+				for (int step = 1;; step++) {
+					int nx = x + dir[0] * step, ny = y + dir[1] * step;
+					if (nx < 0 || nx >= 8 || ny < 0 || ny >= 8) break;
+					attackedMatrix[nx][ny] = 1;
+					if (pieces->getPieceAtGrid(nx, ny)) break;
+				}
+			}
+		}
+		else if (typeid(*piece) == typeid(King)) {
+			for (int dx = -1; dx <= 1; dx++) {
+				for (int dy = -1; dy <= 1; dy++) {
+					if (dx == 0 && dy == 0)
+						continue;
+					int nx = x + dx, ny = y + dy;
+					if (nx >= 0 && nx < 8 && ny >= 0 && ny < 8)
+						attackedMatrix[nx][ny] = 1;
+				}
+			}
+		}
+	}
+}

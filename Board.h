@@ -4,17 +4,21 @@
 #include <memory>
 #include "IArrowManager.h"
 #include "Arrow.h"
+#include "Pieces.h"
 #ifndef BOARD
 #define BOARD
 class Board {
 private:
 
+
+
 	int board[9][9] = { 0 };
 	int redChecked[9][9] = { 0 };
-
 	std::unique_ptr<IArrowManager> AM_;
 public:
 	
+	int attackedByWhite[9][9] = { 0 };
+	int attackedByBlack[9][9] = { 0 };
 	bool isWhite =true; // 1-white, 0-black
 	const int boardOrgX= 450;
 	const int boardOrgY= 50;
@@ -41,6 +45,12 @@ public:
 	void setWhite() { this->isWhite = true;}
 	void updateLastMoved(int currX, int currY, int prevX, int prevY);
 	void handleRightClick(int x,int y);
+
+
+	void updateAttackedSquares(Pieces* pieces);
+
+	bool isSquareAttackedByWhite(int x, int y) const { return attackedByWhite[x][y]; }
+	bool isSquareAttackedByBlack(int x, int y) const { return attackedByBlack[x][y]; }
 
 	int pixelToGridX(int x) const { return (x - boardOrgX) / cellSize; }
 	int pixelToGridY(int y) const { return (y - boardOrgY) / cellSize; }

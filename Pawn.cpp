@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <string>
 #include <sstream>
+#include "King.h"
 
 extern Game gameInstance;
 extern Board* globalBoard;
@@ -45,7 +46,7 @@ void Pawn::render(HDC hdc, int boardOrgX, int boardOrgY, int cellSize) {
     DeleteObject(hPen);
 }
 
-void Pawn::updateAvailableMoves(bool isWhite) {
+void Pawn::updateAvailableMoves(bool isWhite,bool incheck) {
     this->availableMoves.clear();
 
     int direction = 0;
@@ -113,6 +114,9 @@ void Pawn::updateAvailableMoves(bool isWhite) {
             }
         }
     }
+    if (!incheck)
+        updateCheckMoves();
+
 }
 
 void Pawn::renderAvailableMoves(HDC hdc, int boardOrgX, int boardOrgY, int cellSize) {
@@ -133,10 +137,6 @@ void Pawn::renderAvailableMoves(HDC hdc, int boardOrgX, int boardOrgY, int cellS
         Ellipse(hdc, drawX + margin, drawY + margin, drawX + cellSize - margin, drawY + cellSize - margin);
         DeleteObject(brush);
     }
-}
-void Pawn::capture(IPiece* other) {
-    gameInstance.getPieces()->removePiece(other);
-    delete other;
 }
 
 void Pawn::move(int mx,int my,int fromX, int fromY, int whereX, int whereY, bool& validMove)
@@ -187,9 +187,100 @@ void Pawn::move(int mx,int my,int fromX, int fromY, int whereX, int whereY, bool
 
             gSelectedPiece->gridX = whereX;
             gSelectedPiece->gridY = whereY;
-            gSelectedPiece->updateAvailableMoves(globalBoard->isWhite);
+            gSelectedPiece->updateAvailableMoves(globalBoard->isWhite,false);
             validMove = true;
             break;
         }
     }
+}
+void Pawn::updateCheckMoves()
+{
+    if (gameInstance.checkState.factionChecking == this->faction)
+    {
+        return;
+    }
+
+    std::vector<POINT> restrictedMoves;
+
+    auto originalCheckState = gameInstance.checkState;
+    auto originalCheckingPieces = gameInstance.checkingPieces;
+    auto originalCheckingKing = gameInstance.checkState.checkedKing;
+
+    int origX = this->gridX;
+    int origY = this->gridY;
+
+    for (auto move : this->availableMoves)
+    {
+        IPiece* targetPiece = gameInstance.pieces_->getPieceAtGrid(move.x, move.y);
+        bool captured = false;
+        IPiece* removedPiece = nullptr;
+
+        if (targetPiece != nullptr && targetPiece->faction != this->faction)
+        {
+            removedPiece = targetPiece;
+            gameInstance.pieces_->removePiece(removedPiece);
+            captured = true;
+        }
+
+        this->gridX = move.x;
+        this->gridY = move.y;
+
+        for (auto piece : originalCheckingPieces)
+        {
+            piece->updateAvailableMoves(globalBoard->isWhite, true);
+        }
+
+        if (originalCheckingPieces.empty())
+        {
+            for (auto piece : gameInstance.getPieces()->getAllPieces())
+            {
+                if (piece != this && piece->faction != this->faction)
+                {
+                    piece->updateAvailableMoves(globalBoard->isWhite, true);
+                }
+            }
+        }
+
+        gameInstance.addCheckingPieces();
+
+        bool wasInCheck = originalCheckState.isInCheck;
+        bool isInCheckNow = gameInstance.checkState.isInCheck;
+        bool checkCleared = (wasInCheck && !isInCheckNow);
+        bool remainsSafe = (!wasInCheck && !isInCheckNow);
+
+        if (checkCleared || remainsSafe)
+        {
+            restrictedMoves.push_back(move);
+        }
+
+        this->gridX = origX;
+        this->gridY = origY;
+
+        gameInstance.checkState = originalCheckState;
+        gameInstance.checkingPieces = originalCheckingPieces;
+        gameInstance.checkState.checkedKing = originalCheckingKing;
+
+        if (captured && removedPiece != nullptr)
+        {
+            gameInstance.pieces_->addPiece(removedPiece);
+        }
+    }
+    //std::copy(restrictedMoves.begin(), restrictedMoves.end(),
+    //    std::back_inserter(gameInstance.globalAvailableMoves));
+    for (auto p : restrictedMoves)
+    {
+        gameInstance.globalAvailableMoves.push_back({ p,this->faction });
+    }
+
+    availableMoves = restrictedMoves;
+}
+void Pawn::capture(IPiece* other) {
+    gameInstance.getPieces()->removePiece(other);
+    auto& checkingPieces = gameInstance.checkingPieces;
+    checkingPieces.erase(
+        std::remove(checkingPieces.begin(), checkingPieces.end(), other),
+        checkingPieces.end()
+    );
+
+    delete other;
 }

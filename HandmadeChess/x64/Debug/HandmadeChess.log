@@ -1,3 +1,4 @@
-﻿  King.cpp
-C:\Users\Iulian\source\repos\HandmadeChess\King.cpp(21,39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+﻿  HandmadeChess.cpp
+C:\Users\Iulian\source\repos\HandmadeChess\HandmadeChess.cpp(187,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Iulian\source\repos\HandmadeChess\HandmadeChess.cpp(309,73): warning C4805: '==': unsafe mix of type 'bool' and type 'int' in operation
   HandmadeChess.vcxproj -> C:\Users\Iulian\source\repos\HandmadeChess\x64\Debug\HandmadeChess.exe

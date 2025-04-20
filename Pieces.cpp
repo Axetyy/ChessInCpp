@@ -33,11 +33,11 @@ void Pieces::addPieces(bool isWhite) {
 
     for (int i = 0; i < 8; i++) {
         Pawn* whitePawn = new Pawn(i, whiteFrontRow, 1);
-        whitePawn->updateAvailableMoves(isWhite);
+        whitePawn->updateAvailableMoves(isWhite,false);
         pieces[1].push_back(whitePawn);
 
         Pawn* blackPawn = new Pawn(i, blackFrontRow, 0);
-        blackPawn->updateAvailableMoves(isWhite);
+        blackPawn->updateAvailableMoves(isWhite,false);
         pieces[0].push_back(blackPawn);
     }
 
@@ -46,8 +46,8 @@ void Pieces::addPieces(bool isWhite) {
     Knight* knight1 = new Knight(1, whiteBackRow, 1);
     Knight* knight2 = new Knight(6, whiteBackRow, 1);
 
-    knight1->updateAvailableMoves(isWhite);
-    knight2->updateAvailableMoves(isWhite);
+    knight1->updateAvailableMoves(isWhite,false);
+    knight2->updateAvailableMoves(isWhite,false);
 
     pieces[1].push_back(knight1);
     pieces[1].push_back(knight2);
@@ -55,8 +55,8 @@ void Pieces::addPieces(bool isWhite) {
     Knight* knight3 = new Knight(1, blackBackRow, 0);
     Knight* knight4 = new Knight(6, blackBackRow, 0);
 
-    knight3->updateAvailableMoves(isWhite);
-    knight4->updateAvailableMoves(isWhite);
+    knight3->updateAvailableMoves(isWhite,false);
+    knight4->updateAvailableMoves(isWhite,false);
 
     pieces[0].push_back(knight3);
     pieces[0].push_back(knight4);
@@ -66,8 +66,8 @@ void Pieces::addPieces(bool isWhite) {
     Bishop* bishop1 = new Bishop(2, whiteBackRow, 1);
     Bishop* bishop2 = new Bishop(5, whiteBackRow, 1);
 
-    bishop1->updateAvailableMoves(isWhite);
-    bishop2->updateAvailableMoves(isWhite);
+    bishop1->updateAvailableMoves(isWhite,false);
+    bishop2->updateAvailableMoves(isWhite,false);
 
     pieces[1].push_back(bishop1);
     pieces[1].push_back(bishop2);
@@ -75,8 +75,8 @@ void Pieces::addPieces(bool isWhite) {
     Bishop* bishop3 = new Bishop(2, blackBackRow, 0);
     Bishop* bishop4 = new Bishop(5, blackBackRow, 0);
 
-    bishop3->updateAvailableMoves(isWhite);
-    bishop4->updateAvailableMoves(isWhite);
+    bishop3->updateAvailableMoves(isWhite,false);
+    bishop4->updateAvailableMoves(isWhite,false);
 
     pieces[0].push_back(bishop3);
     pieces[0].push_back(bishop4);
@@ -87,8 +87,8 @@ void Pieces::addPieces(bool isWhite) {
     Rook* rook1 = new Rook(0, whiteBackRow, 1);
     Rook* rook2 = new Rook(7, whiteBackRow, 1);
 
-    rook1->updateAvailableMoves(isWhite);
-    rook2->updateAvailableMoves(isWhite);
+    rook1->updateAvailableMoves(isWhite,false);
+    rook2->updateAvailableMoves(isWhite,false);
 
     pieces[1].push_back(rook1);
     pieces[1].push_back(rook2);
@@ -96,11 +96,16 @@ void Pieces::addPieces(bool isWhite) {
     Rook* rook3 = new Rook(0, blackBackRow, 0);
     Rook* rook4 = new Rook(7, blackBackRow, 0);
 
-    rook3->updateAvailableMoves(isWhite);
-    rook4->updateAvailableMoves(isWhite);
+    rook3->updateAvailableMoves(isWhite,false);
+    rook4->updateAvailableMoves(isWhite,false);
 
     pieces[0].push_back(rook3);
     pieces[0].push_back(rook4);
+    rook1->isFirstMove = true;
+    rook2->isFirstMove = true;
+    rook3->isFirstMove = true;
+    rook4->isFirstMove = true;
+
 
     //Queen
     if (isWhite) {
@@ -110,8 +115,8 @@ void Pieces::addPieces(bool isWhite) {
         pieces[1].push_back(whiteQueen);
         pieces[0].push_back(blackQueen);
 
-        whiteQueen->updateAvailableMoves(isWhite);
-        blackQueen->updateAvailableMoves(isWhite);
+        whiteQueen->updateAvailableMoves(isWhite,false);
+        blackQueen->updateAvailableMoves(isWhite,false);
 
         King* whiteKing = new King(4, whiteBackRow, 1);
         King* blackKing = new King(4, blackBackRow, 0);
@@ -119,8 +124,10 @@ void Pieces::addPieces(bool isWhite) {
         pieces[1].push_back(whiteKing);
         pieces[0].push_back(blackKing);
 
-        whiteKing->updateAvailableMoves(isWhite);
-        blackKing->updateAvailableMoves(isWhite);
+        whiteKing->updateAvailableMoves(isWhite,false);
+        blackKing->updateAvailableMoves(isWhite,false);
+        whiteKing->isFirstMove = true;
+        blackKing->isFirstMove = true;
     }
     else
     {
@@ -130,8 +137,8 @@ void Pieces::addPieces(bool isWhite) {
         pieces[1].push_back(whiteQueen);
         pieces[0].push_back(blackQueen);
 
-        whiteQueen->updateAvailableMoves(isWhite);
-        blackQueen->updateAvailableMoves(isWhite);
+        whiteQueen->updateAvailableMoves(isWhite,false);
+        blackQueen->updateAvailableMoves(isWhite,false);
 
         King* whiteKing = new King(3, whiteBackRow, 1);
         King* blackKing = new King(3, blackBackRow, 0);
@@ -139,8 +146,11 @@ void Pieces::addPieces(bool isWhite) {
         pieces[1].push_back(whiteKing);
         pieces[0].push_back(blackKing);
 
-        whiteKing->updateAvailableMoves(isWhite);
-        blackKing->updateAvailableMoves(isWhite);
+        whiteKing->updateAvailableMoves(isWhite,false);
+        blackKing->updateAvailableMoves(isWhite,false);
+
+        whiteKing->isFirstMove = true;
+        blackKing->isFirstMove = true;
     }
 
 
@@ -178,4 +188,24 @@ void Pieces::removePiece(IPiece* piece) {
             }
         }
     }
+}
+void Pieces::addPiece(IPiece* piece)
+{
+    if (piece->faction) {
+        pieces[1].push_back(piece);
+    }
+    else {
+        pieces[0].push_back(piece);
+    }
+}
+
+IPiece* Pieces::getPieceAtGrid(int gridX, int gridY) {
+    for (auto factionPieces : pieces) {
+        for (auto piece : factionPieces) {
+            if (piece->gridX == gridX && piece->gridY == gridY) {
+                return piece;
+            }
+        }
+    }
+    return nullptr;
 }

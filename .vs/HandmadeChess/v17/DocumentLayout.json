@@ -3,12 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\HandmadeChess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:HandmadeChess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\GameLogic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:GameLogic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\GameLogic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:GameLogic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pieces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Pieces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Bishop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Bishop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\King.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:King.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Knight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Knight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Queen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Queen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Rook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Rook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Rook.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Rook.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Pawn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pieces.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Pieces.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\IPiece.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:IPiece.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Knight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Knight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Queen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Queen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\King.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:King.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Bishop.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Bishop.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C17015B3-7E99-4C81-A33B-250C7B4E32DA}|HandmadeChess.vcxproj|solutionrelative:Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +86,245 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pieces.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pieces.h",
+              "RelativeDocumentMoniker": "Pieces.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pieces.h",
+              "RelativeToolTip": "Pieces.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-25T20:55:59.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Board.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Board.cpp",
+              "RelativeDocumentMoniker": "Board.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Board.cpp",
+              "RelativeToolTip": "Board.cpp",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAAK0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T18:22:32.354Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "HandmadeChess.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\HandmadeChess.cpp",
+              "RelativeDocumentMoniker": "HandmadeChess.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\HandmadeChess.cpp",
+              "RelativeToolTip": "HandmadeChess.cpp",
+              "ViewState": "AgIAADQBAAAAAAAAAAAYwFkBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T18:17:28.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Rook.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Rook.h",
+              "RelativeDocumentMoniker": "Rook.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Rook.h",
+              "RelativeToolTip": "Rook.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-25T14:53:38.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Queen.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Queen.h",
+              "RelativeDocumentMoniker": "Queen.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Queen.h",
+              "RelativeToolTip": "Queen.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-25T14:53:03.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Pawn.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pawn.h",
+              "RelativeDocumentMoniker": "Pawn.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pawn.h",
+              "RelativeToolTip": "Pawn.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-25T14:52:36.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Knight.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Knight.h",
+              "RelativeDocumentMoniker": "Knight.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Knight.h",
+              "RelativeToolTip": "Knight.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-25T14:52:15.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Bishop.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Bishop.h",
+              "RelativeDocumentMoniker": "Bishop.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Bishop.h",
+              "RelativeToolTip": "Bishop.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-25T14:52:00.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IPiece.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\IPiece.h",
+              "RelativeDocumentMoniker": "IPiece.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\IPiece.h",
+              "RelativeToolTip": "IPiece.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-25T14:04:54.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Pieces.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pieces.cpp",
+              "RelativeDocumentMoniker": "Pieces.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pieces.cpp",
+              "RelativeToolTip": "Pieces.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T14:21:08.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "King.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\King.cpp",
+              "RelativeDocumentMoniker": "King.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\King.cpp",
+              "RelativeToolTip": "King.cpp",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAPUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T14:26:19.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bishop.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Bishop.cpp",
+              "RelativeDocumentMoniker": "Bishop.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Bishop.cpp",
+              "RelativeToolTip": "Bishop.cpp",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAuwO4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T14:51:08.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Pawn.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pawn.cpp",
+              "RelativeDocumentMoniker": "Pawn.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Pawn.cpp",
+              "RelativeToolTip": "Pawn.cpp",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAAAA0BAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T12:47:30.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Rook.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Rook.cpp",
+              "RelativeDocumentMoniker": "Rook.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Rook.cpp",
+              "RelativeToolTip": "Rook.cpp",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAAAOQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-24T15:43:44.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Knight.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Knight.cpp",
+              "RelativeDocumentMoniker": "Knight.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Knight.cpp",
+              "RelativeToolTip": "Knight.cpp",
+              "ViewState": "AgIAALkAAAAAAAAAAAAuwNsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T08:49:36.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Queen.cpp",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Queen.cpp",
+              "RelativeDocumentMoniker": "Queen.cpp",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\Queen.cpp",
+              "RelativeToolTip": "Queen.cpp",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAuwBMBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-25T14:53:07.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "King.h",
+              "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\King.h",
+              "RelativeDocumentMoniker": "King.h",
+              "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\King.h",
+              "RelativeToolTip": "King.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-24T15:11:53.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GameLogic.cpp",
               "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\GameLogic.cpp",
               "RelativeDocumentMoniker": "GameLogic.cpp",
               "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\GameLogic.cpp",
               "RelativeToolTip": "GameLogic.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-24T13:02:28.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameLogic.h",
               "DocumentMoniker": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\GameLogic.h",
               "RelativeDocumentMoniker": "GameLogic.h",
               "ToolTip": "C:\\Users\\Iulian\\source\\repos\\HandmadeChess\\GameLogic.h",
               "RelativeToolTip": "GameLogic.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-24T13:02:27.127Z",
               "EditorCaption": ""
